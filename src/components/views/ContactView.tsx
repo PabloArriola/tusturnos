@@ -84,12 +84,12 @@ export const ContactView: React.FC<ContactViewProps> = ({
                       Atención rápida por WhatsApp
                     </p>
                     <h3 className="font-display text-xl font-bold">Chateá con un asesor ahora</h3>
-                    <p className="text-sm text-emerald-200 mt-1 font-mono">+54 9 11 2394-0228</p>
+                    <p className="text-sm text-emerald-200 mt-1 font-mono">+54 3794 825713</p>
                   </div>
 
                   <a
                     className="inline-flex items-center justify-center gap-2 w-full py-3.5 px-5 rounded-full bg-[#d0ef68] hover:bg-[#b5d24e] text-[#171e00] text-xs font-bold transition-all shadow-md active:scale-95"
-                    href="https://wa.me/5491123940228?text=Hola!%20Quiero%20charlar%20con%20un%20asesor%20de%20TusTurnos"
+                    href="https://wa.me/5493794825713?text=Hola!%20Quiero%20charlar%20con%20un%20asesor%20de%20TusTurnos"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
@@ -101,6 +101,30 @@ export const ContactView: React.FC<ContactViewProps> = ({
 
               {/* General Contact Info Card */}
               <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-xs border border-[#dde4e0] flex flex-col gap-5">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-xl bg-[#e8f0ec] flex items-center justify-center text-[#062217] shrink-0">
+                    <span className="material-symbols-outlined text-[20px]">call</span>
+                  </div>
+                  <div className="flex flex-col text-xs">
+                    <span className="text-[10px] uppercase font-bold text-[#424844] tracking-wider">Teléfono Directo</span>
+                    <a className="font-bold text-[#062217] hover:underline" href="tel:+543794825713">
+                      +54 3794 825713
+                    </a>
+                    <span className="text-[#424844]">Llamadas y WhatsApp</span>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-xl bg-[#e8f0ec] flex items-center justify-center text-[#062217] shrink-0">
+                    <span className="material-symbols-outlined text-[20px]">location_on</span>
+                  </div>
+                  <div className="flex flex-col text-xs">
+                    <span className="text-[10px] uppercase font-bold text-[#424844] tracking-wider">Ubicación</span>
+                    <p className="font-bold text-[#062217]">Corrientes Capital</p>
+                    <p className="text-[#424844]">Argentina</p>
+                  </div>
+                </div>
+
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-xl bg-[#e8f0ec] flex items-center justify-center text-[#062217] shrink-0">
                     <span className="material-symbols-outlined text-[20px]">mail</span>
@@ -240,7 +264,7 @@ export const ContactView: React.FC<ContactViewProps> = ({
                         <input
                           type="tel"
                           required
-                          placeholder="+54 11 5555-5555"
+                          placeholder="+54 379 482-5713"
                           value={phone}
                           onChange={(e) => setPhone(e.target.value)}
                           className="w-full h-11 px-4 rounded-xl bg-[#f4fbf7] border border-[#dde4e0] text-sm text-[#062217] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#062217]"
@@ -371,7 +395,7 @@ export const ContactView: React.FC<ContactViewProps> = ({
               <div className="grid grid-cols-3 gap-3 pt-2">
                 <div className="p-3.5 bg-white rounded-2xl border border-[#dde4e0] flex flex-col">
                   <span className="font-display text-base font-bold text-[#062217]">ARG</span>
-                  <span className="text-[11px] text-[#424844]">Buenos Aires, CABA</span>
+                  <span className="text-[11px] text-[#424844]">Corrientes Capital</span>
                 </div>
                 <div className="p-3.5 bg-white rounded-2xl border border-[#dde4e0] flex flex-col">
                   <span className="font-display text-base font-bold text-[#062217]">CHL</span>

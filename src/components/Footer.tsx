@@ -48,6 +48,18 @@ export const Footer: React.FC<FooterProps> = ({ onSelectTab, onOpenLegalModal })
             <p className="text-xs text-[#424844]">
               De los turnos, nos encargamos nosotros.
             </p>
+            <div className="flex flex-col gap-1 text-[11px] text-[#555d58] mt-2">
+              <p className="flex items-center gap-1.5">
+                <span className="material-symbols-outlined text-[15px] text-[#526600]">call</span>
+                <a href="https://wa.me/5493794825713" target="_blank" rel="noopener noreferrer" className="hover:text-[#062217] font-medium">
+                  +54 3794 825713
+                </a>
+              </p>
+              <p className="flex items-center gap-1.5">
+                <span className="material-symbols-outlined text-[15px] text-[#526600]">location_on</span>
+                <span>Corrientes Capital. Argentina.</span>
+              </p>
+            </div>
           </div>
 
           {/* Navigation Links */}
@@ -72,7 +84,7 @@ export const Footer: React.FC<FooterProps> = ({ onSelectTab, onOpenLegalModal })
 
         {/* Legal & Copyright */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 text-[11px] text-[#424844]">
-          <p>© 2024 TusTurnos. Todos los derechos reservados.</p>
+          <p>© 2026 TusTurnos. Todos los derechos reservados. Desarrollado este año 2026 por <strong className="text-[#062217] font-semibold">Mainumby</strong>.</p>
           <div className="flex items-center gap-6">
             <button onClick={openPrivacy} className="hover:text-[#062217] transition-colors underline-offset-2 hover:underline">
               Privacidad
