@@ -36,14 +36,13 @@ export const Footer: React.FC<FooterProps> = ({ onSelectTab, onOpenLegalModal })
           <div className="flex flex-col gap-2 max-w-sm">
             <button
               onClick={() => handleNavClick('inicio')}
-              className="flex items-center gap-2 text-left"
+              className="flex items-center text-left group focus:outline-none"
             >
-              <div className="w-8 h-8 rounded-lg bg-[#062217] flex items-center justify-center text-white">
-                <span className="material-symbols-outlined text-[18px] text-[#d0ef68]">calendar_today</span>
-              </div>
-              <span className="font-display text-lg font-bold tracking-tight text-[#062217]">
-                Tus<span className="text-[#526600]">Turnos</span>
-              </span>
+              <img
+                src="/logo.png"
+                alt="Mainumby Turnos Online"
+                className="h-12 w-auto object-contain mix-blend-multiply transition-transform group-hover:scale-105"
+              />
             </button>
             <p className="text-xs text-[#424844]">
               De los turnos, nos encargamos nosotros.

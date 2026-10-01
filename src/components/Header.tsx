@@ -33,17 +33,16 @@ export const Header: React.FC<HeaderProps> = ({
   return (
     <header className="fixed top-0 inset-x-0 z-50 bg-[#f4fbf7]/90 backdrop-blur-xl border-b border-[#dde4e0]/60 shadow-[0_1px_8px_rgba(6,34,23,0.04)]">
       <div className="h-20 w-full max-w-[1280px] mx-auto px-4 md:px-8 flex items-center justify-between gap-4">
-        {/* Zone 1: Brand Wordmark */}
+        {/* Zone 1: Brand Logo */}
         <button
           onClick={() => handleNavClick('inicio')}
-          className="flex items-center gap-2.5 text-left group focus:outline-none"
+          className="flex items-center text-left group focus:outline-none"
         >
-          <div className="w-10 h-10 rounded-xl bg-[#062217] flex items-center justify-center text-white shadow-sm transition-transform group-hover:scale-105">
-            <span className="material-symbols-outlined text-[20px] text-[#d0ef68]">calendar_today</span>
-          </div>
-          <span className="font-display text-xl font-bold tracking-tight text-[#062217]">
-            Tus<span className="text-[#526600]">Turnos</span>
-          </span>
+          <img
+            src="/logo.png"
+            alt="Mainumby Turnos Online"
+            className="h-12 sm:h-14 w-auto object-contain mix-blend-multiply transition-transform group-hover:scale-105"
+          />
         </button>
 
         {/* Zone 2: Navigation Links */}
