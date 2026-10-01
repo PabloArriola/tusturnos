@@ -84,7 +84,7 @@ export const Footer: React.FC<FooterProps> = ({ onSelectTab, onOpenLegalModal })
 
         {/* Legal & Copyright */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 text-[11px] text-[#424844]">
-          <p>© 2026 TusTurnos. Todos los derechos reservados. Desarrollado este año 2026 por <strong className="text-[#062217] font-semibold">Mainumby</strong>.</p>
+          <p>© 2026 TusTurnos. Todos los derechos reservados. Desarrollado por <strong className="text-[#062217] font-semibold">Mainumby</strong>.</p>
           <div className="flex items-center gap-6">
             <button onClick={openPrivacy} className="hover:text-[#062217] transition-colors underline-offset-2 hover:underline">
               Privacidad
