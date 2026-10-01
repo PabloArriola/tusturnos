@@ -1,0 +1,6 @@
+{
+  "name": "TusTurnos - Sistema de Gestión y Agendamiento Online",
+  "description": "Plataforma integral de gestión de turnos, cobro de señas con Mercado Pago, recordatorios automáticos por WhatsApp y sincronización en tiempo real.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
