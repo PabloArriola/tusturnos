@@ -21,14 +21,40 @@ export const ContactView: React.FC<ContactViewProps> = ({
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
+  const rubroLabels: Record<string, string> = {
+    salud: 'Salud & Clínicas Médicas',
+    estetica: 'Belleza & Estética',
+    deporte: 'Deportes & Canchas / Gimnasios',
+    consultoria: 'Consultoría Profesional & Legal',
+    otro: 'Otro rubro comercial',
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+
+    const rubroText = rubroLabels[rubro] || rubro || 'No especificado';
+    const cleanMessage = message.trim() || 'Sin mensaje adicional';
+
+    const text = `👋 *Nueva Consulta desde la Web - Mainumby Turnos Online*
+
+👤 *Nombre:* ${fullName}
+📧 *Email:* ${email}
+📱 *Teléfono:* ${phone}
+🏢 *Rubro:* ${rubroText}
+📅 *Agendas requeridas:* ${agendas} profesional(es)
+
+💬 *Mensaje:*
+${cleanMessage}`;
+
+    const waUrl = `https://wa.me/5493794825713?text=${encodeURIComponent(text)}`;
+
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmitted(true);
-      onShowToast('¡Consulta enviada con éxito! Te responderemos en breve.');
-    }, 600);
+      window.open(waUrl, '_blank', 'noopener,noreferrer');
+      onShowToast('¡Abriendo WhatsApp con tu consulta!');
+    }, 400);
   };
 
   const resetForm = () => {
@@ -349,22 +375,35 @@ export const ContactView: React.FC<ContactViewProps> = ({
                     </div>
                   </form>
                 ) : (
-                  <div className="flex flex-col items-center justify-center py-12 text-center gap-3">
+                  <div className="flex flex-col items-center justify-center py-10 text-center gap-3">
                     <div className="w-16 h-16 rounded-full bg-[#bbeece] text-[#002414] flex items-center justify-center shadow-xs">
                       <span className="material-symbols-outlined text-[32px]">check_circle</span>
                     </div>
                     <h3 className="font-display text-2xl font-bold text-[#062217]">
-                      ¡Mensaje recibido con éxito!
+                      ¡Consulta enviada a WhatsApp!
                     </h3>
-                    <p className="text-xs text-[#424844] max-w-md">
-                      Un especialista de TusTurnos ya está revisando tus datos y te contactará en los próximos minutos por correo o WhatsApp.
+                    <p className="text-xs text-[#424844] max-w-md leading-relaxed">
+                      Se abrió WhatsApp con todos los datos de tu consulta dirigidos a nuestro asesor. Te responderemos en pocos minutos.
                     </p>
-                    <button
-                      onClick={resetForm}
-                      className="mt-3 inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-[#eef5f1] hover:bg-[#dde4e0] text-[#062217] text-xs font-bold transition-colors"
-                    >
-                      Enviar otra consulta
-                    </button>
+                    <div className="flex flex-wrap items-center justify-center gap-3 mt-3">
+                      <button
+                        onClick={() => {
+                          const rubroText = rubroLabels[rubro] || rubro || 'No especificado';
+                          const text = `👋 *Nueva Consulta desde la Web - Mainumby Turnos Online*\n\n👤 *Nombre:* ${fullName}\n📧 *Email:* ${email}\n📱 *Teléfono:* ${phone}\n🏢 *Rubro:* ${rubroText}\n📅 *Agendas requeridas:* ${agendas} profesional(es)\n\n💬 *Mensaje:*\n${message.trim() || 'Sin mensaje adicional'}`;
+                          window.open(`https://wa.me/5493794825713?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
+                        }}
+                        className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#062217] hover:bg-[#1d382b] text-white text-xs font-bold transition-all shadow-sm active:scale-95"
+                      >
+                        <span className="material-symbols-outlined text-[16px] text-[#d0ef68]">chat</span>
+                        <span>Reabrir chat de WhatsApp</span>
+                      </button>
+                      <button
+                        onClick={resetForm}
+                        className="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-[#eef5f1] hover:bg-[#dde4e0] text-[#062217] text-xs font-bold transition-colors"
+                      >
+                        Enviar otra consulta
+                      </button>
+                    </div>
                   </div>
                 )}
               </div>
