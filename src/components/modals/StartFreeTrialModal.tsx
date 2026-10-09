@@ -43,14 +43,39 @@ export const StartFreeTrialModal: React.FC<StartFreeTrialModalProps> = ({
     }
   };
 
+  const rubroNames: Record<string, string> = {
+    belleza: 'Belleza & Estética',
+    salud: 'Salud & Clínicas',
+    terapias: 'Psicología, Coaching & Terapias',
+    deporte: 'Deportes, Canchas & Gimnasios',
+    consultoria: 'Consultoría Profesional',
+    otro: 'Otro rubro',
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+
+    const rubroLabel = rubroNames[rubro] || rubro;
+    const text = `🚀 *Nueva Solicitud de Prueba Gratis (14 Días) - Mainumby Turnos*
+
+🏢 *Negocio:* ${businessName}
+🏷️ *Rubro:* ${rubroLabel}
+🔗 *Enlace solicitado:* tusturnos.app/${customSlug || 'mi-agenda'}
+📧 *Email:* ${email}
+📱 *WhatsApp:* ${phone}
+📦 *Plan elegido:* ${initialPlan}
+
+_Por favor confirmar activación y envío de credenciales._`;
+
+    const waUrl = `https://wa.me/5493794825713?text=${encodeURIComponent(text)}`;
+
     setTimeout(() => {
       setIsSubmitting(false);
       setStep(2);
+      window.open(waUrl, '_blank', 'noopener,noreferrer');
       onSuccess(businessName || 'Mi Negocio', `tusturnos.app/${customSlug || 'estudio-aura'}`);
-    }, 700);
+    }, 400);
   };
 
   return (
@@ -188,28 +213,41 @@ export const StartFreeTrialModal: React.FC<StartFreeTrialModalProps> = ({
             </div>
 
             <h3 className="font-display text-2xl font-bold text-[#062217]">
-              ¡Tu agenda está lista!
+              ¡Solicitud de activación generada!
             </h3>
 
-            <p className="text-xs text-[#424844] max-w-sm mx-auto">
-              Te enviamos las credenciales de acceso a <strong>{email}</strong> y un mensaje de bienvenida a tu WhatsApp.
+            <p className="text-xs text-[#424844] max-w-sm mx-auto leading-relaxed">
+              Los datos para <strong>{businessName}</strong> ({email}) fueron enviados a nuestro WhatsApp para preparar tu espacio de 14 días gratis.
             </p>
 
             <div className="p-4 rounded-2xl bg-[#eef5f1] border border-[#dde4e0] text-center">
               <p className="text-[11px] text-[#424844] uppercase font-bold tracking-wider mb-1">
-                Tu enlace de reservas público
+                Tu enlace de reservas público solicitado
               </p>
               <p className="font-mono text-sm font-bold text-[#062217]">
                 tusturnos.app/{customSlug || 'mi-agenda'}
               </p>
             </div>
 
-            <button
-              onClick={onClose}
-              className="w-full py-3.5 rounded-full font-bold text-xs text-white bg-[#062217] hover:bg-[#1d382b] transition-all"
-            >
-              Ir al panel de administración
-            </button>
+            <div className="flex flex-col gap-2 pt-2">
+              <button
+                onClick={() => {
+                  const rubroLabel = rubroNames[rubro] || rubro;
+                  const text = `🚀 *Nueva Solicitud de Prueba Gratis (14 Días) - Mainumby Turnos*\n\n🏢 *Negocio:* ${businessName}\n🏷️ *Rubro:* ${rubroLabel}\n🔗 *Enlace solicitado:* tusturnos.app/${customSlug || 'mi-agenda'}\n📧 *Email:* ${email}\n📱 *WhatsApp:* ${phone}\n📦 *Plan elegido:* ${initialPlan}\n\n_Por favor confirmar activación y envío de credenciales._`;
+                  window.open(`https://wa.me/5493794825713?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
+                }}
+                className="w-full py-3.5 rounded-full font-bold text-xs text-[#171e00] bg-[#d0ef68] hover:bg-[#b5d24e] transition-all shadow-sm flex items-center justify-center gap-2"
+              >
+                <span className="material-symbols-outlined text-[18px]">chat</span>
+                <span>Confirmar activación por WhatsApp</span>
+              </button>
+              <button
+                onClick={onClose}
+                className="w-full py-3 rounded-full font-bold text-xs text-[#424844] hover:bg-[#eef5f1] transition-all"
+              >
+                Cerrar ventana
+              </button>
+            </div>
           </div>
         )}
       </div>

@@ -17,11 +17,21 @@ export const BookDemoModal: React.FC<BookDemoModalProps> = ({ isOpen, onClose, o
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitted(true);
+
+    const text = `📹 *Solicitud de Demostración Online (15 min) - Mainumby Turnos*
+
+👤 *Nombre:* ${name}
+📧 *Email:* ${email}
+📅 *Horario preferido:* ${date}
+
+_Hola! Quiero agendar una videollamada para ver la plataforma en vivo._`;
+
+    const waUrl = `https://wa.me/5493794825713?text=${encodeURIComponent(text)}`;
+
     setTimeout(() => {
       onSuccess();
-      setSubmitted(false);
-      onClose();
-    }, 1200);
+      window.open(waUrl, '_blank', 'noopener,noreferrer');
+    }, 400);
   };
 
   return (
@@ -35,16 +45,34 @@ export const BookDemoModal: React.FC<BookDemoModalProps> = ({ isOpen, onClose, o
         </button>
 
         {submitted ? (
-          <div className="text-center py-8 space-y-3">
+          <div className="text-center py-6 space-y-4">
             <div className="w-14 h-14 rounded-full bg-[#bbeece] text-[#002414] flex items-center justify-center mx-auto">
               <span className="material-symbols-outlined text-[28px]">video_camera_front</span>
             </div>
             <h3 className="font-display text-xl font-bold text-[#062217]">
-              ¡Demostración Agendada!
+              ¡Solicitud de Demo enviada!
             </h3>
-            <p className="text-xs text-[#424844]">
-              Te enviamos la invitación de Google Meet a <strong>{email}</strong> con los detalles.
+            <p className="text-xs text-[#424844] leading-relaxed">
+              Se abrió WhatsApp para coordinar la videollamada con <strong>{name}</strong> y enviarte el link de Google Meet a <strong>{email}</strong>.
             </p>
+            <div className="flex flex-col gap-2 pt-2">
+              <button
+                onClick={() => {
+                  const text = `📹 *Solicitud de Demostración Online (15 min) - Mainumby Turnos*\n\n👤 *Nombre:* ${name}\n📧 *Email:* ${email}\n📅 *Horario preferido:* ${date}\n\n_Hola! Quiero agendar una videollamada para ver la plataforma en vivo._`;
+                  window.open(`https://wa.me/5493794825713?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
+                }}
+                className="w-full py-3 rounded-full font-bold text-xs text-[#171e00] bg-[#d0ef68] hover:bg-[#b5d24e] transition-all shadow-sm flex items-center justify-center gap-2"
+              >
+                <span className="material-symbols-outlined text-[18px]">chat</span>
+                <span>Reabrir WhatsApp</span>
+              </button>
+              <button
+                onClick={onClose}
+                className="w-full py-2.5 rounded-full font-bold text-xs text-[#424844] hover:bg-[#eef5f1] transition-all"
+              >
+                Cerrar
+              </button>
+            </div>
           </div>
         ) : (
           <div>
