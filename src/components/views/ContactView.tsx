@@ -196,12 +196,11 @@ export const ContactView: React.FC<ContactViewProps> = ({
 
               {/* Dedicated Team Portrait Card */}
               <div className="rounded-3xl bg-[#eef5f1] border border-[#dde4e0] p-4 flex items-center gap-4 shadow-xs">
-                <div className="w-16 h-16 rounded-2xl overflow-hidden shrink-0 shadow-xs border border-white">
+                <div className="w-16 h-16 rounded-2xl overflow-hidden shrink-0 shadow-xs border border-white bg-[#e8f3ec]">
                   <img
-                    alt="Especialista de operaciones de TusTurnos"
-                    referrerPolicy="no-referrer"
+                    alt="Especialista de operaciones de Mainumby"
                     className="w-full h-full object-cover"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCS03POgyzxkF6-dT7IDwAjdN-az-nA8-r6PbMTRJa0iHkYWJt-4mYIGnJrGwZYVcItQUmjhwztcjRKddOw59D_orbMMbMy2f_BP0rADZnUHGg6Bup_hLAMwI-1pMspgRUHwola36hubY4sI7TTOKfcZ7WVkqL_2Rirz0VF1D-qLJX7YPq5clovNZhVCixVPW7smObjjvISAPe6wXsi6nNdCqqrWU0sr3TSyItJlYuwLm1tO56AIP18"
+                    src="/avatar-sketch.svg"
                   />
                 </div>
                 <div className="flex flex-col">

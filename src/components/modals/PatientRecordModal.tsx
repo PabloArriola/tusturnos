@@ -19,8 +19,8 @@ export const PatientRecordModal: React.FC<PatientRecordModalProps> = ({ isOpen, 
         </button>
 
         <div className="flex items-center gap-3.5 mb-6">
-          <div className="w-12 h-12 rounded-2xl bg-[#062217] text-[#d0ef68] flex items-center justify-center font-bold text-lg">
-            SA
+          <div className="w-12 h-12 rounded-2xl overflow-hidden border border-[#dde4e0] bg-[#e8f3ec] shrink-0">
+            <img src="/avatar-sketch.svg" alt="Avatar cliente" className="w-full h-full object-cover" />
           </div>
           <div>
             <div className="flex items-center gap-2">
@@ -32,7 +32,7 @@ export const PatientRecordModal: React.FC<PatientRecordModalProps> = ({ isOpen, 
               </span>
             </div>
             <p className="text-xs text-[#424844]">
-              Cliente frecuente • 14 turnos completados • +54 11 4920-8812
+              Cliente frecuente • 14 turnos completados • +54 379 482-5713
             </p>
           </div>
         </div>
@@ -92,7 +92,7 @@ export const PatientRecordModal: React.FC<PatientRecordModalProps> = ({ isOpen, 
 
         <div className="pt-5 mt-5 border-t border-[#dde4e0] flex items-center justify-between gap-3">
           <button
-            onClick={() => alert('Abriendo WhatsApp con Sofía Albarracín (+54 11 4920-8812)...')}
+            onClick={() => window.open('https://wa.me/5493794825713?text=Hola!%20Nos%20comunicamos%20desde%20Mainumby%20Turnos', '_blank')}
             className="flex-1 py-2.5 rounded-full text-xs font-bold bg-[#eef5f1] hover:bg-[#dde4e0] text-[#062217] transition-colors flex items-center justify-center gap-1.5"
           >
             <span className="material-symbols-outlined text-[16px] text-[#526600]">chat</span>

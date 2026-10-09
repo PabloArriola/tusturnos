@@ -520,7 +520,7 @@ export const BenefitsView: React.FC<BenefitsViewProps> = ({
                 <img
                   alt={item.author}
                   referrerPolicy="no-referrer"
-                  className="w-11 h-11 rounded-full object-cover shadow-xs ring-1 ring-[#dde4e0]"
+                  className="w-12 h-12 rounded-2xl object-cover shadow-xs border border-[#dde4e0] bg-[#e8f3ec] shrink-0"
                   src={item.imageUrl}
                 />
                 <div className="flex flex-col min-w-0">

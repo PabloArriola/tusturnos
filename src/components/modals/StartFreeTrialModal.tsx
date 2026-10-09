@@ -151,7 +151,7 @@ export const StartFreeTrialModal: React.FC<StartFreeTrialModalProps> = ({
                   <input
                     type="tel"
                     required
-                    placeholder="+54 9 11 ..."
+                    placeholder="+54 379 482-5713"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     className="w-full px-4 py-3 rounded-xl bg-[#f4fbf7] border border-[#dde4e0] text-sm text-[#062217] focus:outline-none focus:ring-2 focus:ring-[#062217]"

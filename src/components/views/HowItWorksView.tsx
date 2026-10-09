@@ -27,7 +27,7 @@ export const HowItWorksView: React.FC<HowItWorksViewProps> = ({
   };
 
   const handleWhatsAppChat = () => {
-    window.open('https://wa.me/5491123940228?text=Hola!%20Tengo%20dudas%20sobre%20c%C3%B3mo%20funciona%20TusTurnos', '_blank', 'noopener,noreferrer');
+    window.open('https://wa.me/5493794825713?text=Hola!%20Tengo%20dudas%20sobre%20el%20funcionamiento%20de%20Mainumby%20Turnos', '_blank', 'noopener,noreferrer');
   };
 
   const toggleFaq = (idx: number) => {

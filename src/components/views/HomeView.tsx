@@ -27,20 +27,29 @@ export const HomeView: React.FC<HomeViewProps> = ({
   };
 
   const handleWhatsAppChat = () => {
-    window.open('https://wa.me/5491123940228?text=Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20TusTurnos', '_blank', 'noopener,noreferrer');
+    window.open('https://wa.me/5493794825713?text=Hola!%20Quiero%20conocer%20m%C3%A1s%20sobre%20Mainumby%20Turnos%20Online', '_blank', 'noopener,noreferrer');
   };
 
   return (
     <div className="w-full">
       {/* 1. HERO SECTION */}
       <section className="pt-8 pb-16 lg:pt-14 lg:pb-24 overflow-hidden relative" id="inicio">
-        <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[720px] h-[340px] bg-[#d0ef68]/20 rounded-full blur-[100px] pointer-events-none -z-10"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Background Colibrí Watermark & Gradient Overlay for Contrast */}
+        <div className="absolute inset-0 pointer-events-none -z-10 overflow-hidden">
+          <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[650px] h-[650px] opacity-[0.07] lg:opacity-[0.12] hidden md:block">
+            <img src="/logo.png" alt="Colibrí Mainumby" className="w-full h-full object-contain" />
+          </div>
+          {/* Subtle Linear Gradient Overlay from left to center for maximum readability */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#f4fbf7]/90 via-[#f4fbf7]/75 to-transparent"></div>
+          <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[720px] h-[340px] bg-[#d0ef68]/20 rounded-full blur-[100px]"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
             {/* Left Content */}
             <div className="lg:col-span-6 space-y-6">
               {/* Category Badge */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50/80 border border-emerald-200/60 text-emerald-900 text-[11px] font-bold tracking-wider uppercase">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50/80 border border-emerald-200/60 text-emerald-900 text-[11px] font-bold tracking-wider uppercase backdrop-blur-xs">
                 <span className="material-symbols-outlined text-[16px] text-emerald-700">verified_user</span>
                 <span>Sistema de gestión y agendamiento online</span>
               </div>
@@ -78,26 +87,23 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 </button>
               </form>
 
-              {/* Social Proof Stack */}
+              {/* Social Proof Stack with Square Rounded Sketch Avatars */}
               <div className="pt-2 flex items-center gap-3">
-                <div className="flex -space-x-2">
+                <div className="flex -space-x-1.5">
                   <img
-                    alt="Doctora usuario de TusTurnos"
-                    referrerPolicy="no-referrer"
-                    className="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover shadow-xs"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZ40l4DGmXXkfUIAf9_F6AhnMaD1-cV_PDprNtz9hHZStcPmVxxRDNzQBgKwrDfYhY__kq0o8KmQBcrmD2UbaD2d_k2MswAHnst-yjV78LOHNVRkQEM3XCUOkqoms2s5KSTaHeFlg_pVJ3ELq6eZljPjFTdb-BxqSS6zmDcbTDzEeTRlpU96VjbvP0bjGUltIiEwpLJog89t5arU9sLwRnhHNq1xLL6k00PA552HGnLtIQ1i_ZSefo"
+                    alt="Perfil profesional Mainumby"
+                    className="inline-block h-8 w-8 rounded-xl ring-2 ring-white object-cover shadow-xs bg-[#e8f3ec]"
+                    src="/avatar-sketch.svg"
                   />
                   <img
-                    alt="Profesional usuario"
-                    referrerPolicy="no-referrer"
-                    className="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover shadow-xs"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDv3Rn0jMHDGcZ7oXui8tkpYSi3vXX5u7xyDTWU-WvIRI7nqdYZZXZq2fNpshMNAiIAw0MP8P3_3zuAEvJ65Qm_ahezY0hzBiQ4Lw9xlO1UTL9XGtw0oqDXM4hGf7x-32C3CGzZq3g7OgSgO-B3HRk2vvVmpMvxdr2gixjSiBsleVymR81tYN_N2jS80RxpHiWcol6yKkPh5ItuRih4WCv50Jwz1J1p3GQRk6vuHoXAwRvIG2wz1HAU"
+                    alt="Perfil profesional Mainumby"
+                    className="inline-block h-8 w-8 rounded-xl ring-2 ring-white object-cover shadow-xs bg-[#e8f3ec]"
+                    src="/avatar-sketch.svg"
                   />
                   <img
-                    alt="Terapeuta usuario"
-                    referrerPolicy="no-referrer"
-                    className="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover shadow-xs"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBM3hffoxU7k6HksA3tx6kTJdbwZ7dKVpItw8uZz64nO1lEoSHq0wNaHiF-MmjUcKeGdT39YOKojHSZ6N3Ksdd_lAHgADQb_V9IUQR63ESQSx5mTg86YITda-2V3BUYMOQv7boWuR3CO6J9TzhoXYRaEw1vZ7ky4gRcryzimgJ4o08Epy2poE78_dNaR4_kBE9jC1z9m_KHSfmqF6NGTS1VdlziBekVEGoAJ0e2M9fBAOUiieDplyyc"
+                    alt="Perfil profesional Mainumby"
+                    className="inline-block h-8 w-8 rounded-xl ring-2 ring-white object-cover shadow-xs bg-[#e8f3ec]"
+                    src="/avatar-sketch.svg"
                   />
                 </div>
                 <p className="text-xs text-[#424844] font-medium">

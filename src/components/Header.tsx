@@ -87,7 +87,7 @@ export const Header: React.FC<HeaderProps> = ({
           <button
             onClick={onOpenTrialModal}
             title="Mi cuenta / Iniciar sesión"
-            className="w-8 h-8 rounded-full bg-[#062217] text-white flex items-center justify-center hover:bg-[#1d382b] transition-colors"
+            className="w-8 h-8 rounded-xl bg-[#062217] text-white flex items-center justify-center hover:bg-[#1d382b] transition-colors shadow-xs"
           >
             <span className="material-symbols-outlined text-[18px]">person</span>
           </button>

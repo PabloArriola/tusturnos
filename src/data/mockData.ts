@@ -61,7 +61,7 @@ export const TESTIMONIALS: Testimonial[] = [
     quote: 'El ausentismo cayó prácticamente a cero en nuestros tres consultorios odontológicos. La confirmación por WhatsApp es infalible.',
     author: 'Dr. Esteban Morales',
     role: 'Clínica Dental Morales',
-    imageUrl: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD0kiDlxQMM-ZcSeAtLsezQeXzPLALlaf_95qooF4bkZAvGDrjd0TvJodSLIwhGLc3iBWPSJzeAwDXfjKesJiZldsP9-CDvrSTuUmbLJZtfrMJWJAZdjM0zZbDpBMy2ZewcwwNWP_E290P2AVbfhYW-agOuffcmauRSvRsCyyudb3itRMLzM_hvn5sdAoeEsa03HSLzQd3AB7yQjtOTUoVXV3aWhPi1S-TXrUKldx_uhbNSNIeBskUC',
+    imageUrl: '/avatar-sketch.svg',
     rating: 5
   },
   {
@@ -70,7 +70,7 @@ export const TESTIMONIALS: Testimonial[] = [
     quote: 'Antes pasaba 3 horas diarias respondiendo Instagram. Con TusTurnos y la seña por Mercado Pago, ya no tengo huecos sin cobrar.',
     author: 'Sofía Valenzuela',
     role: 'Atelier Studio Hair',
-    imageUrl: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBpknSyej33nVI9iiMn0x-u_qBoLPRTCWVTykRPV8dD0wVjAQeJWJoc1c7ZmKgqZzrOgJGOwVMx3g2SQboX-2SY5d6mcQDyj1-BwDUlxkBw1oOuv5Q9WFrSeRmkeImKxK0aUDeevEEQcCoChkFaYkhZdvNijCFv4TsOSQJfd-Zj7MSAc7J0PouzZSIAB1JAuYoM0bqrzHSJf4JvnlkdfsHIMCgapFfXDZteM8wT5Vk7wPqyZdyr5Bsj',
+    imageUrl: '/avatar-sketch.svg',
     rating: 5
   },
   {
@@ -79,7 +79,7 @@ export const TESTIMONIALS: Testimonial[] = [
     quote: 'Coordino clientes de Argentina, Chile y España. La conversión automática de zona horaria y la integración de Google Meet me cambió la vida.',
     author: 'Ignacio Ríos',
     role: 'Ríos & Asociados Tax',
-    imageUrl: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDHAy8axqRVrwzbvuxlHfqe_tW7tBwJbrzulxKS-Znv0FNqRPJZoenypNiNX4X7eHL4k_13F1628Smtkt36zXaP_fCuKkDyOFDkdApBVn2iuziTnkpOaVDRAz4eZychaZp3LySXIGMBBTm4irk-B9TfUs9JtjjjVN_EkKqVQrEnNuzCPKv3_OKD3aAodSjWp3xxmKy7lhGtmcyIGKVdPeO_BfHg8RwwPlKWR-9bLKxA8UZ-V1UAzlNQ',
+    imageUrl: '/avatar-sketch.svg',
     rating: 5
   },
   {
@@ -88,7 +88,7 @@ export const TESTIMONIALS: Testimonial[] = [
     quote: 'Gestionamos 6 canchas de padel y fútbol. El sistema de seña previa terminó con los partidos cancelados 10 minutos antes.',
     author: 'Camila Benítez',
     role: 'Club Deportivo Central',
-    imageUrl: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD0_2iOu0477uy4tbpdI1BfpcLACocn_DkQMzbf6jEhwt7l4psthsqPmv93SoxQtXg4rKUuwSQuoOk8Ls27Ld2DZy6E9y0iwygT4wQjB_YRl8zVGpiO1fcLN_bRRm_qGKVOw1I3WyS_qPILSSPJhUDkR_hq_tccdRZ0SroQF_w6LnpEoWppADWmc9jQD87CyGMo2VTyimkyW4uRvvr4k1DtTSFGom7Uq3XTGFaL07_ZgrH8deBxzeiw',
+    imageUrl: '/avatar-sketch.svg',
     rating: 5
   }
 ];
