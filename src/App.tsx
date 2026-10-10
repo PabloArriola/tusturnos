@@ -17,7 +17,7 @@ export default function App() {
   const [currentTab, setCurrentTab] = useState<TabType>('inicio');
   const [trialModalOpen, setTrialModalOpen] = useState(false);
   const [trialEmail, setTrialEmail] = useState('');
-  const [trialPlan, setTrialPlan] = useState('Plan 2 Agendas');
+  const [trialPlan, setTrialPlan] = useState('Plan 1 Agenda (1 Agente)');
   const [demoModalOpen, setDemoModalOpen] = useState(false);
   const [patientModalOpen, setPatientModalOpen] = useState(false);
   const [legalModalState, setLegalModalState] = useState<{
@@ -56,7 +56,7 @@ export default function App() {
     }, 4000);
   };
 
-  const handleOpenTrialModal = (email = '', plan = 'Plan 2 Agendas') => {
+  const handleOpenTrialModal = (email = '', plan = 'Plan 1 Agenda (1 Agente)') => {
     setTrialEmail(email);
     setTrialPlan(plan);
     setTrialModalOpen(true);

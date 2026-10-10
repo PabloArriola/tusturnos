@@ -11,7 +11,7 @@ interface StartFreeTrialModalProps {
 export const StartFreeTrialModal: React.FC<StartFreeTrialModalProps> = ({
   isOpen,
   onClose,
-  initialPlan = 'Plan 2 Agendas',
+  initialPlan = 'Plan 1 Agenda (1 Agente)',
   initialEmail = '',
   onSuccess,
 }) => {
